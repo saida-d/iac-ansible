@@ -2,7 +2,7 @@
 - hosts: worker-nodes
   become: True
   vars:
-    - packages: ["git"]
+    - packages: ["git","nginx"]
   tasks:
    - name: Installing {{ packages }} on {{ worker-nodes }}
      yum:
