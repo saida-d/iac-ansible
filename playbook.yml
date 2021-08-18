@@ -6,7 +6,7 @@
   tasks:
    - name: Installing {{ packages }} on {{ worker-nodes }}
      yum:
-      name: {{item}}
+      name: "{{item}}"
       state: present
      with_items: "{{packages}}"
       
