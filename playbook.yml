@@ -1,5 +1,5 @@
 ---
-- hosts: worker-nodes
+- hosts: all
   become: True
   vars:
     - packages: ["git","nginx"]
