@@ -1,0 +1,12 @@
+---
+- hosts: worker-nodes
+  become: True
+  vars:
+    - packages: ["git"]
+  tasks:
+   - name: Installing {{ packages }} on {{ worker-nodes }}
+     yum:
+      name: {{item}}
+      state: present
+     with_items: "{{packages}}"
+      
